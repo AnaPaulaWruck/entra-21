@@ -20,6 +20,7 @@ namespace Entra21.ExerciciosWhile
                 fatorialNumero = fatorialNumero * (numero - 1);
                 numero = numero - 1;
             }
+            Console.WriteLine("Valor valor");
         }
     }
 }
