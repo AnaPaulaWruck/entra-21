@@ -13,14 +13,24 @@ namespace Entra21.ExerciciosWhile
             // Solicite um número e faça o fatorial deste número, utilizando while.
             Console.Write("Digite um número: ");
             int numero = Convert.ToInt32(Console.ReadLine());
+            int auxNumero = numero - 1;
+            int contador = numero;
             int fatorialNumero = numero;
 
-            while (numero != 0)
+            if (numero == 0)
             {
-                fatorialNumero = fatorialNumero * (numero - 1);
-                numero = numero - 1;
+                Console.WriteLine("Fatorial de " + numero + " = 1");
             }
-            Console.WriteLine("Valor valor");
+            else
+            {
+                while ((contador > 0) && (auxNumero != 1))
+                {
+                    fatorialNumero = fatorialNumero * auxNumero;
+                    auxNumero = auxNumero - 1;
+                    contador = contador - 1;
+                }
+                Console.WriteLine("Fatorial de " + numero + " = " + fatorialNumero);
+            }
         }
     }
 }
