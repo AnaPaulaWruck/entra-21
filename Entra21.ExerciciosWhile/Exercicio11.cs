@@ -11,14 +11,18 @@ namespace Entra21.ExerciciosWhile
         public void Executar()
         {
             Console.Clear();
-            Console.Write("Digite o 1º número: ");
-            int numero1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Digite o 2º número: ");
-            int numero2 = Convert.ToInt32(Console.ReadLine());
+            int numero1 = 0, numero2 = 0;
             int opcaoSelecionada = 0;
 
-            Console.WriteLine("\nEscolha a operação desejada:");
-            Console.WriteLine(@"
+            while (opcaoSelecionada != 5)
+            {
+                Console.Write("\nDigite o 1º número: ");
+                numero1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Digite o 2º número: ");
+                numero2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("\nEscolha a operação desejada:");
+                Console.WriteLine(@"
     OPÇÃO | OPERAÇÃO
       1   | Somar
       2   | Subtrair
@@ -26,8 +30,6 @@ namespace Entra21.ExerciciosWhile
       4   | Dividir
       5   | Sair");
 
-            while (opcaoSelecionada != 5)
-            {
                 Console.Write("\nOpção selecionada: ");
                 opcaoSelecionada = Convert.ToInt32(Console.ReadLine());
                 if (opcaoSelecionada == 1)
