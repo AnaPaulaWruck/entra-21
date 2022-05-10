@@ -38,7 +38,7 @@ namespace Entra21.ExerciciosWhile
             int menorQuantidadeCartoesVermelhos = int.MaxValue, maiorQuantidadeCartoesVermelhos = int.MinValue;
 
 
-            while (indice < 3)
+            while (indice < 22)
             {
                 Console.Write("\nNome: ");
                 string nome = Console.ReadLine().Trim();
