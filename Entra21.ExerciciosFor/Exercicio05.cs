@@ -35,7 +35,7 @@ namespace Entra21.ExerciciosFor
                 var quantidadeCadastros = Convert.ToInt32(Console.ReadLine());
                 for (var i = 0; i < quantidadeCadastros; i++)
                 {
-                    Console.Write("Modelo do carro: ");
+                    Console.Write("\nModelo do carro: ");
                     var modeloCarro = Console.ReadLine().Trim().ToUpper();
                     if (modeloCarro.StartsWith("G"))
                     {
@@ -61,13 +61,13 @@ namespace Entra21.ExerciciosFor
                             {
                                 Console.WriteLine("Valor não pode ser negativo.");
                             }
-                            somaValorCarros += valorCarro;
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine("Valor digitado não é um número válido.");
                         }
                     }
+                    somaValorCarros += valorCarro;
 
                     var anoCarro = 0;
                     while (anoCarro <= 0)
@@ -86,20 +86,20 @@ namespace Entra21.ExerciciosFor
                                     Console.WriteLine("Ano não pode ser um valor negativo.");
                                 }
                             }
-                            somaAnoCarros += anoCarro;
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine("Deve ser um número válido.");
                         }
                     }
+                    somaAnoCarros += anoCarro;
                 }
                 mediaAnoCarros = somaAnoCarros / quantidadeCadastros;
                 mediaValorCarros = somaValorCarros / quantidadeCadastros;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Valor digitado inválido. Deve ser um número inteiro positivo.");
+                Console.WriteLine("Valor digitado não é um número válido.");
             }
             Console.WriteLine("\nMédia do ano dos carros: " + mediaAnoCarros);
             Console.WriteLine("Media do valor dos carros: R$ " + mediaValorCarros);
