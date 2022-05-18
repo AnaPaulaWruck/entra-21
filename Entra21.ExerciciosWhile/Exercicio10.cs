@@ -19,7 +19,7 @@ namespace Entra21.ExerciciosWhile
             int indicePar = numero - 1, indiceImpar = numero + 1;
             int contadorPar = 0, contadorImpar = 0;
 
-            while (contadorPar < 10)
+            while (contadorPar < 100)
             {
                 if (indicePar % 2 == 0)
                 {
@@ -28,7 +28,7 @@ namespace Entra21.ExerciciosWhile
                 indicePar = indicePar - 1;
                 contadorPar = contadorPar + 1;
             }
-            while (contadorImpar < 10)
+            while (contadorImpar < 100)
             {
                 if (indiceImpar % 2 != 0)
                 {
