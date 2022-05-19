@@ -17,14 +17,13 @@ namespace Entra21.ExerciciosFor
             */
             Console.Clear();
 
-            var numero = 0;
             var numeroValido = false;
             while (numeroValido == false)
             {
                 try
                 {
                     Console.Write("Digite um número: ");
-                    numero = Convert.ToInt32(Console.ReadLine());
+                    var numero = Convert.ToInt32(Console.ReadLine());
                     numeroValido = true;
                     int indicePar = numero - 1, indiceImpar = numero + 1;
 
