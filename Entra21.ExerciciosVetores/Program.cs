@@ -48,9 +48,8 @@ else if (opcaoDesejada == 7)
     Exercicio07 exercicio07 = new Exercicio07();
     exercicio07.Executar();
 }
-else if(opcaoDesejada == 8)
+else if (opcaoDesejada == 8)
 {
     ExemploProfessor exemploProfessor = new ExemploProfessor();
     exemploProfessor.Executar();
-
 }
