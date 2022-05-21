@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{4632EFD1-5F2C-4F87-B25F-D30BDFA35A07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosFor", "Entra21.ExerciciosFor\Entra21.ExerciciosFor.csproj", "{0F8678F6-938C-425D-9499-68970B769E8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosFor", "Entra21.ExerciciosFor\Entra21.ExerciciosFor.csproj", "{0F8678F6-938C-425D-9499-68970B769E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetores", "Entra21.ExerciciosVetores\Entra21.ExerciciosVetores.csproj", "{42E78BBA-EE4D-4377-8132-C401BD5561DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0F8678F6-938C-425D-9499-68970B769E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F8678F6-938C-425D-9499-68970B769E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F8678F6-938C-425D-9499-68970B769E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
