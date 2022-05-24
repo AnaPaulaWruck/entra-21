@@ -8,7 +8,9 @@ Console.WriteLine(@"-------MENU-------
 5 - Exercício 05
 6 - Exercício 06
 7 - Exercício 07
-8 - Exemplo Professor");
+8 - Exemplo Professor
+9 - Exercício 1 Complementar
+10 - Exercício 2 Complementar");
 
 Console.Write("\nDigite a opção desejada: ");
 int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
@@ -52,4 +54,9 @@ else if (opcaoDesejada == 8)
 {
     ExemploProfessor exemploProfessor = new ExemploProfessor();
     exemploProfessor.Executar();
+}
+else if(opcaoDesejada == 9)
+{
+    Exercicio09 exercicio01Complementar = new Exercicio09();
+    exercicio01Complementar.Executar();
 }
