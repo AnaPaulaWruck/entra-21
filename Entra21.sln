@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosFor", "Entra21.ExerciciosFor\Entra21.ExerciciosFor.csproj", "{0F8678F6-938C-425D-9499-68970B769E8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetores", "Entra21.ExerciciosVetores\Entra21.ExerciciosVetores.csproj", "{42E78BBA-EE4D-4377-8132-C401BD5561DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetores", "Entra21.ExerciciosVetores\Entra21.ExerciciosVetores.csproj", "{42E78BBA-EE4D-4377-8132-C401BD5561DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosOrientacaoObjetos", "Entra21.ExemplosOrientacaoObjetos\Entra21.ExemplosOrientacaoObjetos.csproj", "{F259C7C8-1262-4232-B25C-5533D49822CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{3E4A7FDE-73AB-4511-883E-6078593A99A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E78BBA-EE4D-4377-8132-C401BD5561DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F259C7C8-1262-4232-B25C-5533D49822CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F259C7C8-1262-4232-B25C-5533D49822CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F259C7C8-1262-4232-B25C-5533D49822CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F259C7C8-1262-4232-B25C-5533D49822CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E4A7FDE-73AB-4511-883E-6078593A99A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E4A7FDE-73AB-4511-883E-6078593A99A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E4A7FDE-73AB-4511-883E-6078593A99A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E4A7FDE-73AB-4511-883E-6078593A99A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
