@@ -67,6 +67,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Tests.Exercicio02
             temperaturaConvertida.Should().Be((42 - 273) * 1.8 + 32);
         }
 
+        [Fact]
         public void Validar_CalcularCelsiusParaKelvin()
         {
             // Arrange
@@ -76,8 +77,22 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Tests.Exercicio02
             // Act
             var temperaturaConvertida = temperatura.CalcularCelsiusParaKelvin();
 
-            // Assert
+            // Assertcon
+            temperaturaConvertida.Should().Be(42 + 273);
+        }
 
+        [Fact]
+        public void Validar_CalcularFahrenheitParaKelvin()
+        {
+            // Arrange
+            Temperatura temperatura = new Temperatura();
+            temperatura.ValorTemperatura = 42;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaKelvin();
+
+            // Assert
+            temperaturaConvertida.Should().Be((42 - 32) * (5 / 9) + 273);
         }
     }
 }

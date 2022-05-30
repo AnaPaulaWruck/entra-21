@@ -8,8 +8,8 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 {
     public class Temperatura
     {
-        public string EscalaOrigemTemperatura;
-        public string EscalaDestinoTemperatura;
+        public string EscalaOrigem;
+        public string EscalaDestino;
         public double ValorTemperatura;
 
         public double CalcularFahrenheitParaCelsius()
@@ -44,27 +44,27 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 
         public double ApresentarTemperaturaConvertida()
         {
-            if (EscalaOrigemTemperatura.StartsWith("F") && EscalaDestinoTemperatura.StartsWith("C"))
+            if (EscalaOrigem.StartsWith("F") && EscalaDestino.StartsWith("C"))
             {
                 return CalcularFahrenheitParaCelsius();
             }
-            else if (EscalaOrigemTemperatura.StartsWith("K") && EscalaDestinoTemperatura.StartsWith("C"))
+            else if (EscalaOrigem.StartsWith("K") && EscalaDestino.StartsWith("C"))
             {
                 return CalcularKelvinParaCelsius();
             }
-            else if (EscalaOrigemTemperatura.StartsWith("C") && EscalaDestinoTemperatura.StartsWith("F"))
+            else if (EscalaOrigem.StartsWith("C") && EscalaDestino.StartsWith("F"))
             {
                 return CalcularCelsiusParaFahrenheit();
             }
-            else if (EscalaOrigemTemperatura.StartsWith("K") && EscalaDestinoTemperatura.StartsWith("F"))
+            else if (EscalaOrigem.StartsWith("K") && EscalaDestino.StartsWith("F"))
             {
                 return CalcularKelvinParaFahrenheit();
             }
-            else if (EscalaOrigemTemperatura.StartsWith("C") && EscalaDestinoTemperatura.StartsWith("K"))
+            else if (EscalaOrigem.StartsWith("C") && EscalaDestino.StartsWith("K"))
             {
                 return CalcularCelsiusParaKelvin();
             }
-            else if (EscalaOrigemTemperatura.StartsWith("F") && EscalaDestinoTemperatura.StartsWith("K"))
+            else if (EscalaOrigem.StartsWith("F") && EscalaDestino.StartsWith("K"))
             {
                 return CalcularFahrenheitParaKelvin();
             }
