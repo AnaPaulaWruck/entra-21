@@ -12,12 +12,12 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         public int Cnpj;
         public string[] NomesMedicacao = new string[3];
         public double[] PrecosMedicacao = new double[3];
-        public string[] CategoriasMedicacao = new string[3]; // Antibiotico , Antiinflamatorio , Analgesico
+        public string[] CategoriasMedicacao = new string[3]; // Exemplo: Antibiotico, Analgesico
 
         public double CalcularTotalPedido()
         {
             double totalPedido = 0;
-            for (var i = 0; i < PrecosMedicacao.Length; i++)
+            for (var i = 0; i < NomesMedicacao.Length; i++)
             {
                 totalPedido += PrecosMedicacao[i];
             }
@@ -30,30 +30,14 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
             CalcularTotalPedido();
         }
 
-        public bool VerificarEhAntibiotico()
-        {
-            for (var i = 0; i < NomesMedicacao.Length; i++)
-            {
-                if (CategoriasMedicacao[i] == "Antibiótico" || CategoriasMedicacao[i] == "Antibiotico")
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         public double CalcularValorAntibioticos()
         {
             double totalPedidoAntibioticos = 0;
-            if (VerificarEhAntibiotico() == true)
+            for (var i = 0; i < NomesMedicacao.Length; i++)
             {
-                for (var i = 0; i < PrecosMedicacao.Length; i++)
+                if (CategoriasMedicacao[i] == "antibiótico" || CategoriasMedicacao[i] == "antibiotico")
                 {
-                    if (CategoriasMedicacao[i] == "Antibiotico")
-                    {
-                        totalPedidoAntibioticos += PrecosMedicacao[i];
-                    }
+                    totalPedidoAntibioticos += PrecosMedicacao[i];
                 }
             }
 
@@ -68,14 +52,11 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         public int CalcularQuantidadeAntibioticos()
         {
             int quantidadeAntibioticos = 0;
-            if (VerificarEhAntibiotico() == true)
+            for (var i = 0; i < NomesMedicacao.Length; i++)
             {
-                for (var i = 0; i < NomesMedicacao.Length; i++)
+                if (CategoriasMedicacao[i] == "antibiótico" || CategoriasMedicacao[i] == "antibiotico")
                 {
-                    if (CategoriasMedicacao[i] == "Antibiotico")
-                    {
-                        quantidadeAntibioticos += 1;
-                    }
+                    quantidadeAntibioticos++;
                 }
             }
 
@@ -87,41 +68,43 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
             CalcularQuantidadeAntibioticos();
         }
 
-        public bool VerificarEhAntiinflamatorio()
+        public double CalcularValorAnalgesicos()
         {
+            double totalPedidosAnalgesicos = 0;
             for (var i = 0; i < NomesMedicacao.Length; i++)
             {
-                if (CategoriasMedicacao[i] == "Antiinflamatório" || CategoriasMedicacao[i] == "Antiinflamatorio")
+                if (CategoriasMedicacao[i] == "analgésico" || CategoriasMedicacao[i] == "analgesico")
                 {
-                    return true;
+                    totalPedidosAnalgesicos += PrecosMedicacao[i];
                 }
             }
 
-            return false;
+            return totalPedidosAnalgesicos;
         }
 
-        public double CalcularValorAntiinflamatorios()
+        public void ApresentarValorAnalgesicos()
         {
-            double totalPedidosAntiinflamatorios = 0;
-            if (VerificarEhAntiinflamatorio() == true)
-            {
-                for(var i=0;i< )
-            }
+            CalcularValorAnalgesicos();
         }
 
-        public bool VerificarEhAnalgesico()
+        public int CalcularQuantidadeAnalgesicos()
         {
+            int quantidadeAnalgesicos = 0;
             for (var i = 0; i < NomesMedicacao.Length; i++)
             {
-                if (CategoriasMedicacao[i] == "Analgésico" || CategoriasMedicacao[i] == "Analgesico")
+                if (CategoriasMedicacao[i] == "analgésico" || CategoriasMedicacao[i] == "analgesico")
                 {
-                    return true;
+                    quantidadeAnalgesicos++;
                 }
             }
 
-            return false;
+            return quantidadeAnalgesicos;
         }
 
+        public void ApresentarQuantidadeAnalgesicos()
+        {
+            CalcularQuantidadeAnalgesicos();
+        }
     }
 }
 
@@ -130,7 +113,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
 - Apresentar total do pedido / Calcular, Apresentar
 - Apresentar total do pedido por categoria de produto / Verificar categoria, Calcular, Apresentar
     Exemplo:
-    Antiinflamatório total 15,78
+    Analgésico total 15,78
     Antibiótico total 32.50
 
 - Apresentar quantidade por categoria / Calcular quantidade por categoria, Apresentar
