@@ -10,8 +10,8 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
     {
         public void Executar()
         {
-            var farmacia = new Farmacia();
-            farmacia.
+            //var farmacia = new Farmacia();
+            //farmacia.
 
         }
     }
