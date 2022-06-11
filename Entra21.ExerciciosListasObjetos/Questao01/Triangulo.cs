@@ -2,10 +2,10 @@
 {
     internal class Triangulo
     {
+        public int Codigo;
         public int Lado1;
         public int Lado2;
         public int Lado3;
-        public int Codigo;
         public TrianguloClassificacao Classificacao;
 
         public bool ValidarTriangulo()
@@ -37,5 +37,14 @@
 
             return false;
         }
+
+
+        // TODO criar métodos separados para validar lado1, lado 2 e lado 3 para então usar no ValidarTriangulo()
+        //private bool Lado1Valido()
+        //{
+        //    if ()
+
+        //    return false;
+        //}
     }
 }
