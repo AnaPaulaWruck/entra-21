@@ -13,16 +13,17 @@ namespace Entra21.ExerciciosListasObjetos.Questao01
         // Armazenar o código do próximo produto
         private int codigoAtual = 1;
 
-        public bool Adicionar(int lado1, int lado2, int lado3)
+        public bool Adicionar(int lado1, int lado2, int lado3) // , Triangulo classificacao
         {
             Triangulo triangulo = new Triangulo();
 
+            triangulo.Lado1 = lado1;
+            triangulo.Lado2 = lado2;
+            triangulo.Lado3 = lado3;
+            //triangulo.Classificacao = classificacao;
+
             if (triangulo.ValidarTriangulo() == true)
             {
-                triangulo.Lado1 = lado1;
-                triangulo.Lado2 = lado2;
-                triangulo.Lado3 = lado3;
-
                 triangulo.Codigo = codigoAtual;
 
                 codigoAtual++;
@@ -58,6 +59,23 @@ namespace Entra21.ExerciciosListasObjetos.Questao01
             return false;
         }
 
+        public bool Apagar(int codigo)
+        {
+            for (int i = 0; i < triangulos.Count; i++)
+            {
+                Triangulo triangulo = triangulos[i];
+
+                if (triangulo.Codigo == codigo)
+                {
+                    triangulos.Remove(triangulo);
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public List<Triangulo> ObterTodos()
         {
             return triangulos;
@@ -77,5 +95,25 @@ namespace Entra21.ExerciciosListasObjetos.Questao01
 
             return null; // Se o código informado não estiver na lista
         }
+
+        //public string ObterClassificacao()
+        //{
+        //    Triangulo triangulo = new Triangulo();
+
+        //    if (triangulo.EhEquilatero() == true)
+        //    {
+        //        return "Equilátero";
+        //    }
+        //    else if (triangulo.EhEscaleno() == true)
+        //    {
+        //        return "Escaleno";
+        //    }
+        //    else if (triangulo.EhIsosceles() == true)
+        //    {
+        //        return "Isósceles";
+        //    }
+
+        //    return "";
+        //}
     }
 }

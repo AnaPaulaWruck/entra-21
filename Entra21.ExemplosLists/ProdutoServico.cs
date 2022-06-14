@@ -60,7 +60,6 @@
                 // Resgatando de uma lista de objetos
                 Produto produto = produtos[i];
 
-
                 if (produto.Codigo == codigo)
                 {
                     // Posso remover com o índice do objeto desejado
