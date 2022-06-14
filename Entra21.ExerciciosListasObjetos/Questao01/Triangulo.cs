@@ -64,7 +64,7 @@
             return false;
         }
 
-        public bool EhEquilatero()
+        private bool EhEquilatero()
         {
             if (ValidarTriangulo() == false)
             {
@@ -79,7 +79,7 @@
             return false;
         }
 
-        public bool EhEscaleno()
+        private bool EhEscaleno()
         {
             if (ValidarTriangulo() == false)
             {
@@ -94,19 +94,20 @@
             return false;
         }
 
-        public bool EhIsosceles()
+        public TrianguloClassificacao ObterClassificacao()
         {
-            if (ValidarTriangulo() == false)
+            if (EhEquilatero() == true)
             {
-                return false;
+                return TrianguloClassificacao.Equilatero;
             }
-
-            if (EhEquilatero() == false && EhEscaleno() == false)
+            else if (EhEscaleno() == true)
             {
-                return true;
+                return TrianguloClassificacao.Escaleno;
             }
-
-            return false;
+            else
+            {
+                return TrianguloClassificacao.Isosceles;
+            }
         }
     }
 }

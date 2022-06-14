@@ -13,14 +13,14 @@ namespace Entra21.ExerciciosListasObjetos.Questao01
         // Armazenar o código do próximo produto
         private int codigoAtual = 1;
 
-        public bool Adicionar(int lado1, int lado2, int lado3) // , Triangulo classificacao
+        public bool Adicionar(int lado1, int lado2, int lado3)
         {
             Triangulo triangulo = new Triangulo();
 
             triangulo.Lado1 = lado1;
             triangulo.Lado2 = lado2;
             triangulo.Lado3 = lado3;
-            //triangulo.Classificacao = classificacao;
+            triangulo.Classificacao = triangulo.ObterClassificacao();
 
             if (triangulo.ValidarTriangulo() == true)
             {
@@ -95,25 +95,5 @@ namespace Entra21.ExerciciosListasObjetos.Questao01
 
             return null; // Se o código informado não estiver na lista
         }
-
-        //public string ObterClassificacao()
-        //{
-        //    Triangulo triangulo = new Triangulo();
-
-        //    if (triangulo.EhEquilatero() == true)
-        //    {
-        //        return "Equilátero";
-        //    }
-        //    else if (triangulo.EhEscaleno() == true)
-        //    {
-        //        return "Escaleno";
-        //    }
-        //    else if (triangulo.EhIsosceles() == true)
-        //    {
-        //        return "Isósceles";
-        //    }
-
-        //    return "";
-        //}
     }
 }

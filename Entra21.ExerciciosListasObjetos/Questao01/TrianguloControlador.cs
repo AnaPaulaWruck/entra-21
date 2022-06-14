@@ -52,9 +52,7 @@
             Console.Write("Valor Lado 3: ");
             var lado3 = Convert.ToInt32(Console.ReadLine());
 
-            //var classificacao = trianguloServico.ObterClassificacao();
-
-            var cadastrar = trianguloServico.Adicionar(lado1, lado2, lado3); // , classificacao
+            var cadastrar = trianguloServico.Adicionar(lado1, lado2, lado3);
 
             if (cadastrar == false)
             {
