@@ -30,6 +30,10 @@
         {
             this.labelEnderecos = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEnderecoCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCep = new System.Windows.Forms.Label();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.labelEnderecoCompleto = new System.Windows.Forms.Label();
@@ -41,10 +45,6 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.comboBoxPaciente = new System.Windows.Forms.ComboBox();
             this.labelMaskedTextBox = new System.Windows.Forms.Label();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEnderecoCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +76,35 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(767, 505);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            // 
+            // ColumnEnderecoCompleto
+            // 
+            this.ColumnEnderecoCompleto.HeaderText = "Endereço Completo";
+            this.ColumnEnderecoCompleto.MinimumWidth = 40;
+            this.ColumnEnderecoCompleto.Name = "ColumnEnderecoCompleto";
+            this.ColumnEnderecoCompleto.ReadOnly = true;
+            this.ColumnEnderecoCompleto.Width = 400;
+            // 
+            // ColumnCep
+            // 
+            this.ColumnCep.HeaderText = "CEP";
+            this.ColumnCep.Name = "ColumnCep";
+            this.ColumnCep.ReadOnly = true;
+            // 
+            // ColumnPaciente
+            // 
+            this.ColumnPaciente.HeaderText = "Paciente";
+            this.ColumnPaciente.Name = "ColumnPaciente";
+            this.ColumnPaciente.ReadOnly = true;
+            this.ColumnPaciente.Width = 150;
             // 
             // labelCep
             // 
@@ -94,6 +123,7 @@
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(124, 23);
             this.maskedTextBoxCep.TabIndex = 3;
+            this.maskedTextBoxCep.Leave += new System.EventHandler(this.maskedTextBoxCep_Leave);
             // 
             // labelEnderecoCompleto
             // 
@@ -130,6 +160,7 @@
             this.buttonEditar.TabIndex = 7;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonApagar
             // 
@@ -140,6 +171,7 @@
             this.buttonApagar.TabIndex = 8;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // buttonCancelar
             // 
@@ -181,34 +213,6 @@
             this.labelMaskedTextBox.TabIndex = 13;
             this.labelMaskedTextBox.Text = "MaskedTextBox";
             // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            // 
-            // ColumnEnderecoCompleto
-            // 
-            this.ColumnEnderecoCompleto.HeaderText = "Endereço Completo";
-            this.ColumnEnderecoCompleto.MinimumWidth = 40;
-            this.ColumnEnderecoCompleto.Name = "ColumnEnderecoCompleto";
-            this.ColumnEnderecoCompleto.ReadOnly = true;
-            this.ColumnEnderecoCompleto.Width = 400;
-            // 
-            // ColumnCep
-            // 
-            this.ColumnCep.HeaderText = "CEP";
-            this.ColumnCep.Name = "ColumnCep";
-            this.ColumnCep.ReadOnly = true;
-            // 
-            // ColumnPaciente
-            // 
-            this.ColumnPaciente.HeaderText = "Paciente";
-            this.ColumnPaciente.Name = "ColumnPaciente";
-            this.ColumnPaciente.ReadOnly = true;
-            this.ColumnPaciente.Width = 150;
-            // 
             // EnderecosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -230,6 +234,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EnderecosForm";
             this.Text = "Cadastro de Endereços";
+            this.Load += new System.EventHandler(this.EnderecosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

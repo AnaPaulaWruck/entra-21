@@ -38,6 +38,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             return null;
         }
 
+
+
         private void LerArquivo()
         {
             // Verificar se o arquivo não existe
