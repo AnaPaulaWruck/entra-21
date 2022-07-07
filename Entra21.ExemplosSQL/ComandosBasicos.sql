@@ -112,4 +112,3 @@ SELECT id, titulo
 	FROM trabalhos
 	ORDER BY id
 	OFFSET 4 ROWS FETCH NEXT 2 ROWS ONLY;
-
