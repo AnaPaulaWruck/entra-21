@@ -65,48 +65,73 @@ INSERT INTO pessoas
 
 INSERT INTO pessoas
 	(nome, cpf, rg, data_nascimento, idade)
-	VALUES ('', 
-	'', 
-	'', 
-	'', 
-	'');
+	VALUES ('Benedito Pedro Carlos da Mota', 
+	'510.505.472-50', 
+	'43.588.124-3', 
+	'1981-04-19', 
+	'37');
 
 INSERT INTO pessoas
 	(nome, cpf, rg, data_nascimento, idade)
-	VALUES ('', 
-	'', 
-	'', 
-	'', 
-	'');
+	VALUES ('Luís Igor Barbosa', 
+	'370.570.311-06', 
+	'40.651.407-0', 
+	'2013-05-06', 
+	'5');
 
 INSERT INTO pessoas
 	(nome, cpf, rg, data_nascimento, idade)
-	VALUES ('', 
-	'', 
-	'', 
-	'', 
-	'');
+	VALUES ('José Heitor Ramos', 
+	'675.624.925-81', 
+	'83.962.258-2', 
+	'1965-04-11', 
+	'53');
 
 INSERT INTO pessoas
 	(nome, cpf, rg, data_nascimento, idade)
-	VALUES ('', 
-	'', 
-	'', 
-	'', 
-	'');
+	VALUES ('Lucca Tiago Galvão', 
+	'788.124.508-57', 
+	'3.293.335-6', 
+	'1977-06-17', 
+	'41');
 
 INSERT INTO pessoas
 	(nome, cpf, rg, data_nascimento, idade)
-	VALUES ('', 
-	'', 
-	'', 
-	'', 
-	'');
+	VALUES ('Tiago Edson Oliveira', 
+	'389.969.352-39', 
+	'8.198.446-9', 
+	'1977-06-09', 
+	'41');
 
 INSERT INTO pessoas
 	(nome, cpf, rg, data_nascimento, idade)
-	VALUES ('', 
-	'', 
-	'', 
-	'', 
-	'');
+	VALUES ('Enrico Julio Fábio Martins', 
+	'529.078.166-83', 
+	'99.886.242-3', 
+	'2017-03-11', 
+	'1');
+
+INSERT INTO pessoas
+	(nome, cpf, rg, data_nascimento, idade)
+	VALUES ('Oliver Victor Benjamin da Mota', 
+	'798.556.805-02', 
+	'5.103.578-9', 
+	'1985-03-27', 
+	'33');
+
+INSERT INTO pessoas
+	(nome, cpf, rg, data_nascimento, idade)
+	VALUES ('Bryan Caio Lopes', 
+	'213.217.201-30', 
+	'12.949.454-9', 
+	'1970-06-18', 
+	'48');
+
+-- Consultar Tabela pessoas
+SELECT id AS 'Cód', 
+	nome AS 'Nome Completo', 
+	cpf AS 'CPF', 
+	rg AS 'RG', 
+	FORMAT(data_nascimento,'dd/MM/yyyy') AS 'Data de Nasc.',
+	idade AS 'Idade'
+	FROM pessoas;
