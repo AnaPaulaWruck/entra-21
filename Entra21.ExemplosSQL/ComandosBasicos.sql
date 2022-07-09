@@ -291,3 +291,12 @@ SELECT id, titulo
 	FROM trabalhos
 	ORDER BY id
 	OFFSET 4 ROWS FETCH NEXT 2 ROWS ONLY;
+
+-- Exemplo de Update de mais de uma coluna:
+	--UPDATE colaboradores
+		--	SET nome = 'Judity',
+		--	funcao = 'Dev II'
+		--	WHERE nome = 'Juditi';
+
+-- PARA PESQUISAR:
+	-- Relacionamento entre tabelas sql server
