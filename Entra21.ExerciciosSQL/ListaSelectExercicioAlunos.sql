@@ -34,7 +34,7 @@ SELECT quantidade_peixes = COUNT(nome)
 
 -- 5. Selecione a soma da nota 1
 
-SELECT AVG(nota_1) AS 'Média Nota 1'
+SELECT SUM(nota_1) AS 'Média Nota 1'
 	FROM alunos;
 
 -- 6. Selecione a média da nota 2
