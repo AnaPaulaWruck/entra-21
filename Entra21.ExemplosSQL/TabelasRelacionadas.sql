@@ -197,7 +197,3 @@ SELECT
 	INNER JOIN pedidos_pecas AS pp ON (p.id = pp.id_peca)
 	INNER JOIN pecas AS pec ON (pp.id_peca = pec.id)
 	WHERE p.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.489-73');
-
-	SELECT * FROM pedidos
-
-	DELETE FROM pedidos WHERE id = 3

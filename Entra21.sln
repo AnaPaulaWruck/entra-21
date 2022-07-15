@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosListasObj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWindowsForms", "Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{5DB0F903-BE4D-4C13-93BA-DA26061E563B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.BancoDados01.Ado.Net", "Entra21.BancoDados01.Ado.Net\Entra21.BancoDados01.Ado.Net.csproj", "{81EE8989-8199-4EE3-BC00-62643D7A4674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{5DB0F903-BE4D-4C13-93BA-DA26061E563B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DB0F903-BE4D-4C13-93BA-DA26061E563B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DB0F903-BE4D-4C13-93BA-DA26061E563B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81EE8989-8199-4EE3-BC00-62643D7A4674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EE8989-8199-4EE3-BC00-62643D7A4674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EE8989-8199-4EE3-BC00-62643D7A4674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EE8989-8199-4EE3-BC00-62643D7A4674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
