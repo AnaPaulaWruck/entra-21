@@ -39,9 +39,10 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(125, 12);
+            this.buttonApagar.Location = new System.Drawing.Point(109, 9);
+            this.buttonApagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(94, 29);
+            this.buttonApagar.Size = new System.Drawing.Size(82, 22);
             this.buttonApagar.TabIndex = 0;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
@@ -49,18 +50,21 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(234, 12);
+            this.buttonEditar.Location = new System.Drawing.Point(205, 9);
+            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(94, 29);
+            this.buttonEditar.Size = new System.Drawing.Size(82, 22);
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(343, 12);
+            this.buttonCadastrar.Location = new System.Drawing.Point(300, 9);
+            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(94, 29);
+            this.buttonCadastrar.Size = new System.Drawing.Size(82, 22);
             this.buttonCadastrar.TabIndex = 2;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
@@ -74,13 +78,14 @@
             this.dataGridViewTiposPersonagens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnTipo});
-            this.dataGridViewTiposPersonagens.Location = new System.Drawing.Point(12, 52);
+            this.dataGridViewTiposPersonagens.Location = new System.Drawing.Point(10, 39);
+            this.dataGridViewTiposPersonagens.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewTiposPersonagens.Name = "dataGridViewTiposPersonagens";
             this.dataGridViewTiposPersonagens.ReadOnly = true;
             this.dataGridViewTiposPersonagens.RowHeadersWidth = 51;
             this.dataGridViewTiposPersonagens.RowTemplate.Height = 29;
             this.dataGridViewTiposPersonagens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTiposPersonagens.Size = new System.Drawing.Size(425, 382);
+            this.dataGridViewTiposPersonagens.Size = new System.Drawing.Size(372, 286);
             this.dataGridViewTiposPersonagens.TabIndex = 3;
             // 
             // ColumnId
@@ -101,13 +106,14 @@
             // 
             // TipoPersonagemListagemForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 446);
+            this.ClientSize = new System.Drawing.Size(391, 334);
             this.Controls.Add(this.dataGridViewTiposPersonagens);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonApagar);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TipoPersonagemListagemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos de Personagens";

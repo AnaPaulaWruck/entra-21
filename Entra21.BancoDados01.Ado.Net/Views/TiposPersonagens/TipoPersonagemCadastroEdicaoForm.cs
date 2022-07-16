@@ -5,12 +5,25 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
 {
     public partial class TipoPersonagemCadastroEdicaoForm : Form
     {
+        // Armazenar o id do tipo do personagem para permitir a edição
+        private int idEdicao = -1; // GREG
+
         public TipoPersonagemCadastroEdicaoForm()
         {
             InitializeComponent();
         }
 
-        private void buttonSalvar_Click(object sender, EventArgs e)
+        // this => chama a classe de cima para fazer o InitializeComponent()
+        public TipoPersonagemCadastroEdicaoForm(TipoPersonagem tipoPersonagem) : this() // GREG
+        {
+            // Definido o valor do idEdicao para posteriormente saber qual registro deve ser alterado
+            idEdicao = tipoPersonagem.Id;
+
+            // Preenchido o campo do tipo com o valor do banco de dados
+            textBoxTipo.Text = tipoPersonagem.Tipo;
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e) // GREG
         {
             var tipo = textBoxTipo.Text.Trim();
 
@@ -20,10 +33,27 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
             // Instancia do objeto de TipoPersonagemService que permitirá persistir o registro
             var tipoPersonagemService = new TipoPersonagemService();
 
-            // Persistir a informação na tabela de tipos_personagens
-            tipoPersonagemService.Cadastrar(tipoPersonagem);
+            // Verificar se está em modo de cadastro
+            if (idEdicao == -1)
+            {
+                // Persistir a informação na tabela de tipos_personagens
+                tipoPersonagemService.Cadastrar(tipoPersonagem);
 
-            MessageBox.Show("Tipo de personagem cadastrado com sucesso!");
+                MessageBox.Show("Tipo de personagem cadastrado com sucesso!");
+
+                Close();
+
+                return;
+            }
+
+            tipoPersonagem.Id = idEdicao;
+
+            // Atualizar a informação na tabela de tipos_personagens
+            tipoPersonagemService.Editar(tipoPersonagem);
+
+            MessageBox.Show("Tipo de personagem alterado com sucesso");
+
+            Close();
         }
     }
 }

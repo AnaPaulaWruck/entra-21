@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 
 namespace Entra21.BancoDados01.Ado.Net.DataBase
 {
@@ -15,7 +10,7 @@ namespace Entra21.BancoDados01.Ado.Net.DataBase
             SqlConnection conexao = new SqlConnection(); // Ctrl . => Find and install sql connection
 
             // string que contém o caminho para o banco de dados, o que permitirá conectar ao banco de dados
-            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ana.wruck\source\db\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
+            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\db\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
 
             // Definir o caminho da conexão para o Sql Connection
             conexao.ConnectionString = connectionString;

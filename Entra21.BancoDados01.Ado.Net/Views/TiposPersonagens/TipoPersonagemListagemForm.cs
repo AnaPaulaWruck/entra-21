@@ -1,13 +1,4 @@
 ﻿using Entra21.BancoDados01.Ado.Net.Services;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
 {
@@ -71,6 +62,43 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
             AtualizarRegistrosDataGridView();
 
             MessageBox.Show("Registro apagado com sucesso!");
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e) // GREG
+        {
+            if (dataGridViewTiposPersonagens.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastrar algum tipo de personagem");
+                return;
+            }
+
+            if(dataGridViewTiposPersonagens.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione algum registro");
+                return;
+            }
+
+            // Obter a linha selecionada
+            var linhaSelecionada = dataGridViewTiposPersonagens.SelectedRows[0];
+
+            // Obter o id da linha selecionada
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            // Obter do banco de dados o tipo de personagem selecionado
+            var tipoPersonagem = tipoPersonagemService.ObterPorId(id);
+
+            // Instanciado objeto do form para permitir edição passando o tipo personagem, que permitirá
+            // preencher os campos com os dados do Banco de Dados
+            var tipoPersonagemForm = new TipoPersonagemCadastroEdicaoForm(tipoPersonagem);
+            // Apresentado o form para o usuário
+            tipoPersonagemForm.ShowDialog();
+
+            AtualizarRegistrosDataGridView();
+        }
+
+        private void dataGridViewTiposPersonagens_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
