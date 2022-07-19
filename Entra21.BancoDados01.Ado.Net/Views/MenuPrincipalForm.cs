@@ -12,7 +12,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views
 
         private void buttonEditoras_Click(object sender, EventArgs e)
         {
-
+            // Não tem Form feito
         }
 
         private void buttonPersonagens_Click(object sender, EventArgs e)
