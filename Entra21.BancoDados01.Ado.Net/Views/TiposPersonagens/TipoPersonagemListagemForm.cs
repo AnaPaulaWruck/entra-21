@@ -95,10 +95,5 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
 
             AtualizarRegistrosDataGridView();
         }
-
-        private void dataGridViewTiposPersonagens_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -23,7 +23,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             // Percorrido os registros retornados da consulta adicionando na lista de editoras
             for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
             {
-                var linha = tabelaEmMemoria.Rows[1];
+                var linha = tabelaEmMemoria.Rows[i];
 
                 var editora = new Editora();
                 editora.Id = Convert.ToInt32(linha[0]);

@@ -37,33 +37,36 @@
             // labelTipo
             // 
             this.labelTipo.AutoSize = true;
-            this.labelTipo.Location = new System.Drawing.Point(12, 9);
+            this.labelTipo.Location = new System.Drawing.Point(10, 7);
             this.labelTipo.Name = "labelTipo";
-            this.labelTipo.Size = new System.Drawing.Size(39, 20);
+            this.labelTipo.Size = new System.Drawing.Size(30, 15);
             this.labelTipo.TabIndex = 0;
             this.labelTipo.Text = "Tipo";
             // 
             // textBoxTipo
             // 
-            this.textBoxTipo.Location = new System.Drawing.Point(12, 32);
+            this.textBoxTipo.Location = new System.Drawing.Point(10, 24);
+            this.textBoxTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTipo.Name = "textBoxTipo";
-            this.textBoxTipo.Size = new System.Drawing.Size(399, 27);
+            this.textBoxTipo.Size = new System.Drawing.Size(350, 23);
             this.textBoxTipo.TabIndex = 1;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(213, 68);
+            this.buttonCancelar.Location = new System.Drawing.Point(186, 56);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
+            this.buttonCancelar.Size = new System.Drawing.Size(82, 22);
             this.buttonCancelar.TabIndex = 2;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(317, 68);
+            this.buttonSalvar.Location = new System.Drawing.Point(277, 56);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
+            this.buttonSalvar.Size = new System.Drawing.Size(82, 22);
             this.buttonSalvar.TabIndex = 3;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -71,13 +74,14 @@
             // 
             // TipoPersonagemCadastroEdicaoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 109);
+            this.ClientSize = new System.Drawing.Size(370, 88);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.textBoxTipo);
             this.Controls.Add(this.labelTipo);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TipoPersonagemCadastroEdicaoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro/Edição Tipo de Personagem";
