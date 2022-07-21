@@ -9,6 +9,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
         private int idEdicao = -1; // GREG
 
         public TipoPersonagemCadastroEdicaoForm()
+
         {
             InitializeComponent();
         }

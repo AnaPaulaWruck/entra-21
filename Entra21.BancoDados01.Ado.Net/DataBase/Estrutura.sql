@@ -44,3 +44,37 @@ CREATE TABLE cidades(
 
 	FOREIGN KEY(id_unidade_federativa) REFERENCES unidades_federativas(id)
 );
+
+INSERT INTO unidades_federativas (nome, sigla) VALUES
+	('Acre', 'AC'),
+	('Alagoas', 'AL'),
+	('Amapá', 'AP'),
+	('Amazonas', 'AM'),
+	('Bahia', 'BH'),
+	('Ceará', 'CE'),
+	('Distrito Federal', 'DF'),
+	('Espírito Santo', 'ES'),
+	('Goiás', 'GO'),
+	('Maranhão', 'MA'),
+	('Mato Grosso', 'MT'),
+	('Mato Grosso do Sul', 'MS'),
+	('Minas Gerais', 'MG'),
+	('Pará', 'PA'),
+	('Paraíba', 'PB'),
+	('Paraná', 'PR'),
+	('Pernambuco', 'PE'),
+	('Piauí', 'PI'),
+	('Rio de Janeiro', 'RJ'),
+	('Rio Grande do Norte', 'RN'),
+	('Rio Grande do Sul', 'RS'),
+	('Rondônia', 'RO'),
+	('Roraima', 'RR'),
+	('Santa Catarina', 'SC'),
+	('São Paula', 'SP'),
+	('Sergipe', 'SE'),
+	('Tocantis', 'TO');
+
+INSERT INTO cidades (id_unidade_federativa, nome, quantidade_habitantes, data_fundacao, pib) VALUES
+	(24, 'Blumenau', 361855, '1850-09-02 10:30:00', 16000000.00);
+
+SELECT * FROM cidades;

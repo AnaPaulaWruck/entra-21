@@ -26,5 +26,15 @@ namespace Entra21.BancoDados01.Ado.Net.Views
             var tipoPersonagemForm = new TipoPersonagemListagemForm();
             tipoPersonagemForm.ShowDialog();
         }
+
+        private void buttonCidades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUnidadesFederativas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
