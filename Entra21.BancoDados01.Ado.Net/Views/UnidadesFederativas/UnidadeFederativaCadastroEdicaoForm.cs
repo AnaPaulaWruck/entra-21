@@ -61,8 +61,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            textBoxNome.Clear();
-            maskedTextBoxSigla.Clear();
+            Close();
         }
     }
 }

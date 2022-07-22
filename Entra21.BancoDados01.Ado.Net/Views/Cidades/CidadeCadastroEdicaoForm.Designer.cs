@@ -30,8 +30,8 @@
         {
             this.labelNome = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.labelUnidadeFederal = new System.Windows.Forms.Label();
-            this.comboBoxUnidadeFederal = new System.Windows.Forms.ComboBox();
+            this.labelUnidadeFederativa = new System.Windows.Forms.Label();
+            this.comboBoxUnidadeFederativa = new System.Windows.Forms.ComboBox();
             this.labelDataHoraFundacao = new System.Windows.Forms.Label();
             this.textBoxquantidadeHabitantes = new System.Windows.Forms.TextBox();
             this.labelQuantidadeHabitantes = new System.Windows.Forms.Label();
@@ -58,22 +58,23 @@
             this.textBoxNome.Size = new System.Drawing.Size(258, 23);
             this.textBoxNome.TabIndex = 1;
             // 
-            // labelUnidadeFederal
+            // labelUnidadeFederativa
             // 
-            this.labelUnidadeFederal.AutoSize = true;
-            this.labelUnidadeFederal.Location = new System.Drawing.Point(12, 64);
-            this.labelUnidadeFederal.Name = "labelUnidadeFederal";
-            this.labelUnidadeFederal.Size = new System.Drawing.Size(92, 15);
-            this.labelUnidadeFederal.TabIndex = 2;
-            this.labelUnidadeFederal.Text = "Unidade Federal";
+            this.labelUnidadeFederativa.AutoSize = true;
+            this.labelUnidadeFederativa.Location = new System.Drawing.Point(12, 64);
+            this.labelUnidadeFederativa.Name = "labelUnidadeFederativa";
+            this.labelUnidadeFederativa.Size = new System.Drawing.Size(108, 15);
+            this.labelUnidadeFederativa.TabIndex = 2;
+            this.labelUnidadeFederativa.Text = "Unidade Federativa";
             // 
-            // comboBoxUnidadeFederal
+            // comboBoxUnidadeFederativa
             // 
-            this.comboBoxUnidadeFederal.FormattingEnabled = true;
-            this.comboBoxUnidadeFederal.Location = new System.Drawing.Point(12, 82);
-            this.comboBoxUnidadeFederal.Name = "comboBoxUnidadeFederal";
-            this.comboBoxUnidadeFederal.Size = new System.Drawing.Size(258, 23);
-            this.comboBoxUnidadeFederal.TabIndex = 3;
+            this.comboBoxUnidadeFederativa.DisplayMember = "Sigla";
+            this.comboBoxUnidadeFederativa.FormattingEnabled = true;
+            this.comboBoxUnidadeFederativa.Location = new System.Drawing.Point(12, 82);
+            this.comboBoxUnidadeFederativa.Name = "comboBoxUnidadeFederativa";
+            this.comboBoxUnidadeFederativa.Size = new System.Drawing.Size(258, 23);
+            this.comboBoxUnidadeFederativa.TabIndex = 3;
             // 
             // labelDataHoraFundacao
             // 
@@ -131,6 +132,7 @@
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSalvar
             // 
@@ -140,6 +142,7 @@
             this.buttonSalvar.TabIndex = 11;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // CidadeCadastroEdicaoForm
             // 
@@ -154,8 +157,8 @@
             this.Controls.Add(this.labelQuantidadeHabitantes);
             this.Controls.Add(this.textBoxquantidadeHabitantes);
             this.Controls.Add(this.labelDataHoraFundacao);
-            this.Controls.Add(this.comboBoxUnidadeFederal);
-            this.Controls.Add(this.labelUnidadeFederal);
+            this.Controls.Add(this.comboBoxUnidadeFederativa);
+            this.Controls.Add(this.labelUnidadeFederativa);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
             this.Name = "CidadeCadastroEdicaoForm";
@@ -170,8 +173,8 @@
 
         private Label labelNome;
         private TextBox textBoxNome;
-        private Label labelUnidadeFederal;
-        private ComboBox comboBoxUnidadeFederal;
+        private Label labelUnidadeFederativa;
+        private ComboBox comboBoxUnidadeFederativa;
         private Label labelDataHoraFundacao;
         private TextBox textBoxquantidadeHabitantes;
         private Label labelQuantidadeHabitantes;

@@ -35,11 +35,11 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             SqlCommand comando = conexao.CreateCommand();
 
             // Especificando o comando que será executado
-            comando.CommandText = "INSERT INTO unidades_federativas (nome, sigla) VALUES(@NOME, @SIGLA)";
+            comando.CommandText = "INSERT INTO unidades_federativas (nome, sigla) VALUES (@NOME, @SIGLA)";
             comando.Parameters.AddWithValue("@NOME", unidadeFederativa.Nome);
             comando.Parameters.AddWithValue("@SIGLA", unidadeFederativa.Sigla.ToUpper());
 
-            // Executando o comando de insert na tabela de tipos personagens
+            // Executando o comando de insert na tabela de unidades federativas
             comando.ExecuteNonQuery();
 
             conexao.Close();
@@ -47,23 +47,21 @@ namespace Entra21.BancoDados01.Ado.Net.Services
 
         public void Editar(UnidadeFederativa unidadeFederativa)
         {
-            {
-                var conexao = new Conexao().Conectar();
+            var conexao = new Conexao().Conectar();
 
-                // Conectado no banco de dados e definido a query que será executada
-                var comando = conexao.CreateCommand();
-                comando.CommandText = "UPDATE unidades_federativas SET tipo = @TIPO WHERE id = @ID";
+            // Conectado no banco de dados e definido a query que será executada
+            var comando = conexao.CreateCommand();
+            comando.CommandText = "UPDATE unidades_federativas SET nome = @NOME, sigla = @SIGLA WHERE id = @ID";
 
-                comando.Parameters.AddWithValue("@NOME", unidadeFederativa.Nome);
-                comando.Parameters.AddWithValue("@SIGLA", unidadeFederativa.Sigla);
-                comando.Parameters.AddWithValue("@ID", unidadeFederativa.Id);
+            comando.Parameters.AddWithValue("@NOME", unidadeFederativa.Nome);
+            comando.Parameters.AddWithValue("@SIGLA", unidadeFederativa.Sigla);
+            comando.Parameters.AddWithValue("@ID", unidadeFederativa.Id);
 
-                // Executa o UPDATE na tabela de unidades_federativas
-                comando.ExecuteNonQuery();
+            // Executa o UPDATE na tabela de unidades_federativas
+            comando.ExecuteNonQuery();
 
-                // Fechar conexão
-                comando.Connection.Close();
-            }
+            // Fechar conexão
+            comando.Connection.Close();
         }
 
         public UnidadeFederativa ObterPorId(int id)
@@ -78,7 +76,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             // Instanciado tabela em memória para armazenar os registros retornados da consulta SELECT
             var tabelaEmMemoria = new DataTable();
 
-            // Executado a consulta na tabela de tipos_personagens armazenando-os na tabela em memória
+            // Executado a consulta na tabela de unidades_federativas armazenando-os na tabela em memória
             tabelaEmMemoria.Load(comando.ExecuteReader());
 
             if (tabelaEmMemoria.Rows.Count == 0)
@@ -127,7 +125,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
                 unidadeFederativa.Nome = linha["nome"].ToString();
                 unidadeFederativa.Sigla = linha["sigla"].ToString();
 
-                // Adicionado tipoPersonagem instanciado na lista de TiposPersonagens
+                // Adicionado unidadeFederativa instanciado na lista de UnidadesFederativas
                 unidadesFederativas.Add(unidadeFederativa);
             }
 

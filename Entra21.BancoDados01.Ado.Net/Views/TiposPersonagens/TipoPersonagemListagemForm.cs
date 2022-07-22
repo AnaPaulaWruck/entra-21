@@ -64,7 +64,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
             MessageBox.Show("Registro apagado com sucesso!");
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e) // GREG
+        private void buttonEditar_Click(object sender, EventArgs e) 
         {
             if (dataGridViewTiposPersonagens.Rows.Count == 0)
             {

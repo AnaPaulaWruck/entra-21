@@ -77,4 +77,4 @@ INSERT INTO unidades_federativas (nome, sigla) VALUES
 INSERT INTO cidades (id_unidade_federativa, nome, quantidade_habitantes, data_fundacao, pib) VALUES
 	(24, 'Blumenau', 361855, '1850-09-02 10:30:00', 16000000.00);
 
-SELECT * FROM cidades;
+SELECT * FROM unidades_federativas;

@@ -8,7 +8,6 @@
         public DateTime DataHoraFundacao { get; set; }
         public decimal Pib { get; set; }
 
-        // Será preenchido com INNER JOIN
         public UnidadeFederativa UnidadeFederativa { get; set; }
     }
 }

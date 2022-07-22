@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridViewUnidadesFederativas = new System.Windows.Forms.DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSigla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSigla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnidadesFederativas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,36 @@
             this.dataGridViewUnidadesFederativas.Size = new System.Drawing.Size(384, 262);
             this.dataGridViewUnidadesFederativas.TabIndex = 0;
             // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Location = new System.Drawing.Point(158, 12);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
+            this.buttonApagar.TabIndex = 1;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(239, 12);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 2;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonCadastrar
+            // 
+            this.buttonCadastrar.Location = new System.Drawing.Point(320, 12);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrar.TabIndex = 3;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
+            // 
             // ColumnId
             // 
             this.ColumnId.HeaderText = "Código";
@@ -74,34 +104,7 @@
             this.ColumnNome.HeaderText = "Nome";
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 220;
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(158, 12);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
-            this.buttonApagar.TabIndex = 1;
-            this.buttonApagar.Text = "Apagar";
-            this.buttonApagar.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(239, 12);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditar.TabIndex = 2;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            // 
-            // buttonCadastrar
-            // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(320, 12);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCadastrar.TabIndex = 3;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.ColumnNome.Width = 200;
             // 
             // UnidadeFederativaListagemForm
             // 
