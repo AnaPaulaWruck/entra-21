@@ -1,0 +1,24 @@
+body {
+    background: #878787;
+    color: rgb(88, 26, 15);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    background: aliceblue;
+    color: green;
+    border: 1px solid green;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background: green;
+    color: aliceblue;
+}
